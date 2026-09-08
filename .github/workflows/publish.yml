@@ -1,9 +1,7 @@
 name: Publish
-
 on:
   push:
     tags: ["v*"]
-
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -17,6 +15,10 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: npm ci
       - run: npm run check
+      - name: Set package.json version from tag
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          npm version "$TAG_VERSION" --no-git-tag-version --allow-same-version
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
