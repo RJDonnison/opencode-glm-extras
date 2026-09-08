@@ -1,0 +1,55 @@
+{
+  "name": "opencode-glm-extras",
+  "version": "0.1.0",
+  "description": "OpenCode TUI plugin: GLM Coding Plan peak/off-peak rate indicator in the sidebar + PgUp/PgDn navigation between your prompts.",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "tui",
+    "glm",
+    "z.ai",
+    "coding-plan"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "author": "RJDonnison",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RJDonnison/opencode-glm-extras.git"
+  },
+  "exports": {
+    ".": "./plugin.tsx"
+  },
+  "oc-plugin": [
+    "tui"
+  ],
+  "files": [
+    "plugin.tsx",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "prepublishOnly": "npm run check"
+  },
+  "engines": {
+    "opencode": ">=1.18.0"
+  },
+  "dependencies": {
+    "@opentui/solid": "^0.5.11",
+    "solid-js": "^1.9.12"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.18.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "1.18.29",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.0"
+  }
+}
