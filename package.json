@@ -36,12 +36,10 @@
   "engines": {
     "opencode": ">=1.18.0"
   },
-  "dependencies": {
-    "@opentui/solid": "^0.5.11",
-    "solid-js": "^1.9.12"
-  },
   "peerDependencies": {
-    "@opencode-ai/plugin": ">=1.18.0"
+    "@opencode-ai/plugin": ">=1.18.0",
+    "solid-js": "^1.9.12",
+    "@opentui/solid": "^0.5.11"
   },
   "peerDependenciesMeta": {
     "@opencode-ai/plugin": {
@@ -51,6 +49,8 @@
   "devDependencies": {
     "@opencode-ai/plugin": "1.18.29",
     "@types/node": "^22.10.0",
-    "typescript": "^5.9.0"
+    "typescript": "^5.9.0",
+    "solid-js": "^1.9.12",
+    "@opentui/solid": "^0.5.11"
   }
 }
